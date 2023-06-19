@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="finished_trial_numbers"
+            type="androidx.databinding.ObservableField&lt;String&gt;" />
+    </data>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:backgroundTint="@color/ship_cove"
+            app:srcCompat="@drawable/ic_back_arrow"
+            tools:ignore="HSpeakableTextPresentCheck" />
+
+
+        <TextView
+            android:id="@+id/currentTrialNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="已完成 00 題"
+            android:textAlignment="center"
+            android:textColor="@color/astronaut_blue"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/totalTrailNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="共 10 題"
+            android:textAlignment="center"
+            android:textColor="@color/astronaut_blue"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
+        <RelativeLayout
+            android:id="@+id/backgroundBlock"
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <View
+                android:id="@+id/tempBackground"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:background="@color/white" />
+
+            <TextView
+                android:id="@+id/wordView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+                android:text="紅色"
+                android:textColor="@color/Red"
+                android:textSize="48sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="31dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button1"
+                android:onClick="firstButtonClick"
+
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/Red"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                tools:ignore="HSpeakableTextPresentCheck" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/Green"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                tools:ignore="HSpeakableTextPresentCheck"
+               />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/Yellow"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                tools:ignore="HSpeakableTextPresentCheck" />
+
+            <Space
+                android:layout_width="8dp"
+                android:layout_height="match_parent" />
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="@color/Pink"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                tools:ignore="HSpeakableTextPresentCheck" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>

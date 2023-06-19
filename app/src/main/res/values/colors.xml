@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="background_color">#FFE6EEF7</color>
+    <color name="link_water">#FFD4DFEE</color>
+    <color name="pigeon_post">#FFA2B6D4</color>
+    <color name="ship_cove">#FF6F8DB9</color>
+    <color name="kashmir_blue">#FF4A6891</color>
+    <color name="astronaut_blue">#FF254268</color>
+
+    <color name="Red">#FFFF0000</color>
+    <color name="Orange">#FFFF8C00</color>
+    <color name="Yellow">#FFFFFF00</color>
+    <color name="Green">#FF008000</color>
+    <color name="Blue">#FF0000FF</color>
+    <color name="Purple">#ff986DB2</color>
+    <color name="Pink">#FFFF00FF</color>
+</resources>

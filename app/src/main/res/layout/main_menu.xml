@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Stroop Task"
+
+            android:textAlignment="center"
+            android:textColor="@color/astronaut_blue"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_marginTop="25dp"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:inputType="textShortMessage"
+            android:hint="輸入測驗編號"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:background="@color/white"
+            android:textAlignment="center"/>
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="@color/pigeon_post"
+                android:text="清除"
+                android:textColor="@color/astronaut_blue"
+                android:textStyle="bold" />
+        <Button
+            android:id="@+id/mode1"
+            android:layout_marginTop="20dp"
+            android:layout_width="280dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/kashmir_blue"
+            android:textColor="@color/link_water"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:text="中性"/>
+        <Button
+            android:id="@+id/mode2"
+            android:layout_marginTop="20dp"
+            android:layout_width="280dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/kashmir_blue"
+            android:textColor="@color/link_water"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:text="一致"/>
+        <Button
+            android:id="@+id/mode3"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="280dp"
+            android:layout_height="100dp"
+            android:backgroundTint="@color/kashmir_blue"
+            android:textColor="@color/link_water"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:text="不一致"/>
+        <LinearLayout
+            android:layout_width="285dp"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/showlistButton"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:alpha="1"
+                android:backgroundTint="@color/pigeon_post"
+                android:src="@drawable/ic_save"
+                app:tint="@color/astronaut_blue"
+                tools:ignore="HSpeakableTextPresentCheck"/>
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/translationButton"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/pigeon_post"
+                android:src="@drawable/ic_translation"
+                app:tint="@color/astronaut_blue"
+                tools:ignore="HSpeakableTextPresentCheck" />
+            <Space
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <ImageButton
+                android:id="@+id/settingButton"
+                android:layout_width="90dp"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/pigeon_post"
+                android:src="@drawable/ic_setting"
+                app:tint="@color/astronaut_blue"
+                tools:ignore="HSpeakableTextPresentCheck" />
+        </LinearLayout>
+    </LinearLayout>
+</layout>
