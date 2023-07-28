@@ -18,7 +18,7 @@
     * 其餘任務詳細設定請見 [任務選項](##任務選項)
 ## 專案細節
 * App 主要結構 : 
-<img src="README_image/structure.png" width="70%" height="70%">
+<p align="center"><img src="README_image/structure.png" width="60%" height="60%"></p>
 
 ### 首頁 (`MainActivity.kt`)
 
