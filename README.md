@@ -21,8 +21,18 @@
 <p align="center"><img src="README_image/structure.png" width="60%" height="60%"></p>
 
 ### 首頁 (`MainActivity.kt`)
+* 輸入框 : 
+   * 若輸入框為空，則此次任務完成後部會儲存，進而可以當作練習模式。
+   * 若輸入框中有文字，則該文字會做為此任務之編號，且完成任務後任務結果會儲存於手機內部。
+* 中間三個按鈕可選擇任務之測驗模式(mode) : 中立 (Neutral)、一致性 (Congruent)、不一致性 (Uncongruent)
+* 下方三個按鈕從左至右可分別前往 : [歷史資料頁面](###歷史資料頁面)、切換介面語言(中文 or 英文)、[設定頁面](###設定頁面)
+<p align="center"><img src="README_image/MainActivity.png" width="30%" height="30%"></p>
 
 ### 設定頁面 (`SettingActivity.kt`)
+* 設定頁面可以調整任務的細部選擇，而可調整之細節請見 [任務選項](##任務選項)
+* 補充 :固定基準長度的單位會依照上方固定基準之選擇而有所調整
+<p align="center"><img src="README_image/SettingActivity.png" width="30%" height="30%"></p>
+
 ### 任務起始頁面 (`TrialStartActivity.kt`)
 ### 任務互動頁面 (`TrialActivity.kt`)
 ### 任務結果頁面 (`TrialResultActivity.kt`)
