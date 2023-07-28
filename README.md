@@ -16,6 +16,8 @@
         5.  $\color{blue}{\text{不一致性 (Uncongruent)} \times \text{顏色}}$ : 畫面中顯示文字，顏色與文字字義不同，受試者需要回答**文字的顏色**
         6. $\color{blue}{\text{不一致性 (Uncongruent)} \times \text{字義}}$ : 畫面中顯示文字，顏色與文字字義不同，受試者需要回答**文字的字義**
     * 其餘任務詳細設定請見 [任務選項](##任務選項)
+## 任務選項
+## 資料傳遞
 ## 專案細節
 * App 主要結構 : 
 <p align="center"><img src="README_image/structure.png" width="60%" height="60%"></p>
@@ -30,14 +32,37 @@
 
 ### 設定頁面 (`SettingActivity.kt`)
 * 設定頁面可以調整任務的細部選擇，而可調整之細節請見 [任務選項](##任務選項)
-* 補充 :固定基準長度的單位會依照上方固定基準之選擇而有所調整
+* 補充 : 固定基準長度的單位會依照上方固定基準之選擇而有所調整
 <p align="center"><img src="README_image/SettingActivity.png" width="30%" height="30%"></p>
 
 ### 任務起始頁面 (`TrialStartActivity.kt`)
+* 頁面目的 : 讓實驗者在每次測驗前可以確認任務設定是否無誤
+* 點擊開始鍵後，即會進入 [任務互動頁面](###任務互動頁面)
+<p align="center"><img src="README_image/TrialStartActivity.png" width="30%" height="30%"></p>
+
 ### 任務互動頁面 (`TrialActivity.kt`)
+* 上方文字會顯示目前答題數與總題數
+* 下方四格色塊是回答區，需要依照題目需求點擊對應的色塊
+* 當回答題目數量達到總題數後，會自動切換至 [任務結果頁面](###任務結果頁面)
+* 圖左 : 一致性 (Congruent) $\times$ 顏色 $\times$ 無背景
+* 圖右 : 中立 (Neutral) $\times$ 顏色
+<div align="center">
+   <img src="README_image/TrialActivity01.png" width="30%" height="30%">
+   <img src="README_image/TrialActivity02.png" width="30%" height="30%">
+</div>
+
 ### 任務結果頁面 (`TrialResultActivity.kt`)
+* 顯示該次任務結果
+* 按下返回鍵後，若有受試者編號，結果就會自動儲存到手機內部
+* 紀錄內容包含 :
+   * [資料傳遞](##資料傳遞) 內提到的選項
+   * 正確答題數
+   * 錯誤答題數(包含超時與答錯)
+   * 超時答題數
+   * 平均反應時間
+<p align="center"><img src="README_image/TrialResultActivity.png" width="30%" height="30%"></p>
+
 ### 歷史資料頁面 (`ListFilesActivity.kt`)
-## 任務選項
-## 資料傳遞
-
-
+* 顯示當前手機內儲存的資料列表
+* 資料順序上至下為最近紀錄至最早紀錄
+<p align="center"><img src="README_image/ListFilesActivity.png" width="30%" height="30%"></p>
