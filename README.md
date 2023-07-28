@@ -8,16 +8,31 @@
         2. 受試者需要唸出文字的 **顏色** (e.g. 看到 $\color{green}{\text{紅色}}$，受試者回答「綠色」)
 * 由於我的 Lab 需要進行此實驗，同時要將 Stroop Task 轉換為數位版，並提供更多任務可以調整的選項，而此專案即為成果 : 
     * 任務內容 : 受試者在看到手機螢幕上顯示的文字或色塊後，需要依照不同任務要求點擊下方的顏色方塊作為回答，回答時需要越快越好。
-    * 任務階段 : 可分為 $\color{blue}{\text{3 測驗模式(mode)} \times  \text{2 題目類型(trialType)}}$</font>，共六種測驗
-        1. $\color{blue}{\text{中立 (Neutral)} \times \text{顏色}}$ : 畫面中顯示色塊，受試者需要回答**色塊的顏色**
-        2. $\color{blue}{\text{中立 (Neutral)} \times \text{字義}}$ : 畫面中顯示文字，顏色為黑色，受試者需要回答**文字的字義**
-        3. $\color{blue}{\text{一致性 (Congruent)} \times \text{顏色}}$ : 畫面中顯示文字，顏色與文字字義相同，受試者需要回答**文字的顏色**
-        4. $\color{blue}{\text{一致性 (Congruent)} \times \text{字義}}$ : 畫面中顯示文字，顏色與文字字義相同，受試者需要回答**文字的字義** (與第3種相同)
-        5.  $\color{blue}{\text{不一致性 (Uncongruent)} \times \text{顏色}}$ : 畫面中顯示文字，顏色與文字字義不同，受試者需要回答**文字的顏色**
-        6. $\color{blue}{\text{不一致性 (Uncongruent)} \times \text{字義}}$ : 畫面中顯示文字，顏色與文字字義不同，受試者需要回答**文字的字義**
+    * 任務階段 : 可分為 $\color{#113285}{\text{3 測驗模式(mode)} \times  \text{2 題目類型(trialType)}}$</font>，共六種測驗
+        1. $\color{#113285}{\text{中立 (Neutral)} \times \text{顏色}}$ : 畫面中顯示色塊，受試者需要回答**色塊的顏色**
+        2. $\color{#113285}{\text{中立 (Neutral)} \times \text{字義}}$ : 畫面中顯示文字，顏色為黑色，受試者需要回答**文字的字義**
+        3. $\color{#113285}{\text{一致性 (Congruent)} \times \text{顏色}}$ : 畫面中顯示文字，顏色與文字字義相同，受試者需要回答**文字的顏色**
+        4. $\color{#113285}{\text{一致性 (Congruent)} \times \text{字義}}$ : 畫面中顯示文字，顏色與文字字義相同，受試者需要回答**文字的字義** (與第3種相同)
+        5.  $\color{#113285}{\text{不一致性 (Uncongruent)} \times \text{顏色}}$ : 畫面中顯示文字，顏色與文字字義不同，受試者需要回答**文字的顏色**
+        6. $\color{#113285}{\text{不一致性 (Uncongruent)} \times \text{字義}}$ : 畫面中顯示文字，顏色與文字字義不同，受試者需要回答**文字的字義**
     * 其餘任務詳細設定請見 [任務選項](##任務選項)
 ## 任務選項
-## 資料傳遞
+* 任務可選之選項包含 :
+   * $\color{#113285}{\text{測驗編號 (id)}}$ : 
+   * $\color{#113285}{\text{測驗模式 (mode)}}$ : 中立 (Neutral)、一致性 (Congruent)、不一致性 (Uncongruent)
+   * $\color{#113285}{\text{題目類型 (trialType)}}$ : 顏色、字義
+   * $\color{#113285}{\text{是否顯示背景 (isBackgroundShowed)}}$ : 文字後面是否有背景色塊
+   * $\color{#113285}{\text{固定基準 (fixedFactor)}}$ : 任務基準是要固定題數(答n題後結束) or 固定時間(需連續答題n秒)
+   * $\color{#113285}{\text{固定題數 (limitTime)}}$ : 任務須完成總題數(單位 : 題)
+   * $\color{#113285}{\text{固定時間 (AnswerTime)}}$ : 任務總時長(單位 : 秒)
+   * $\color{#113285}{\text{題目語言 (language)}}$ : 題目文字的語言(中文/英文)
+   * $\color{#113285}{\text{答題限時時間 (limitTime)}}$ : 每題限制的時間(0/1/2秒) (0秒代表答題不限時)
+* 以上選項會使用 $\color{red}{\text{trialData}}$ 物件去在 Activities 之間傳遞
+* 除此之外，trialData 也會去紀錄每次任務的 :
+   * $\color{#113285}{\text{CorrectTrialNum}}$ : 正確答題數
+   * $\color{#113285}{\text{WrongTrialNum}}$ :錯誤答題數(包含超時+答錯)
+   * $\color{#113285}{\text{OvertimeTrialNum}}$ : 超時答題數
+   * $\color{#113285}{\text{AvgReactionTime}}$ : 平均答題時間
 ## 專案細節
 * App 主要結構 : 
 <p align="center"><img src="README_image/structure.png" width="60%" height="60%"></p>
